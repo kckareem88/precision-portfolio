@@ -1,24 +1,53 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SiteHeader } from "@/components/portfolio/SiteHeader";
+import { SiteFooter } from "@/components/portfolio/SiteFooter";
+import {
+  About,
+  Contact,
+  Hero,
+  Identity,
+  Logos,
+  Services,
+  Skills,
+  Work,
+} from "@/components/portfolio/Sections";
+import { useReveal } from "@/components/portfolio/useReveal";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Kareem Abdo Hussein — Portfolio 2026";
+const description =
+  "Creative Graphic Designer & Digital Marketing Specialist. Social Media · Branding · Digital Marketing.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  useReveal();
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="flex min-h-screen flex-col">
+      <SiteHeader />
+      <main className="flex-1">
+        <Hero />
+        <About />
+        <Skills />
+        <Services />
+        <Work />
+        <Identity />
+        <Logos />
+        <Contact />
+      </main>
+      <SiteFooter />
     </div>
   );
 }

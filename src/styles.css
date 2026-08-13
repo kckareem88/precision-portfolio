@@ -142,3 +142,55 @@
     color: var(--color-foreground);
   }
 }
+
+/* ===== Kareem Abdo Hussein — Portfolio 2026 design tokens ===== */
+@theme inline {
+  --color-blue: var(--brand-blue);
+  --color-blue-deep: var(--brand-blue-deep);
+  --color-yellow: var(--brand-yellow);
+  --color-ink: var(--brand-ink);
+  --font-display: var(--brand-font-display);
+  --font-script: var(--brand-font-script);
+  --font-sans: var(--brand-font-sans);
+  --font-arabic: var(--brand-font-arabic);
+}
+
+:root {
+  --brand-blue: #0d9bd6;
+  --brand-blue-deep: #0877aa;
+  --brand-yellow: #ffed00;
+  --brand-ink: #06364e;
+  --brand-overlay: #0a95d0e6;
+  --brand-texture: url("/__l5e/assets-v1/0de4f22f-3818-490e-a2a3-17b9fbedeb88/bg-texture.jpg");
+  --brand-font-display: "Anton", system-ui, sans-serif;
+  --brand-font-script: "Caveat", cursive;
+  --brand-font-sans: "Poppins", system-ui, sans-serif;
+  --brand-font-arabic: "Cairo", system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--brand-font-sans);
+  background-color: var(--brand-blue);
+  color: #fff;
+  background-image: linear-gradient(var(--brand-overlay), var(--brand-overlay)), var(--brand-texture);
+  background-position: 50%;
+  background-size: auto, cover;
+  background-attachment: fixed;
+}
+
+html { scroll-behavior: smooth; }
+
+@utility font-display { font-family: var(--brand-font-display); }
+@utility font-script { font-family: var(--brand-font-script); }
+@utility font-arabic { font-family: var(--brand-font-arabic); }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
