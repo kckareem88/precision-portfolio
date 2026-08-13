@@ -9,6 +9,14 @@ import brandMaalem from "@/assets/brand-maalem.jpg.asset.json";
 import brandVanir from "@/assets/brand-vanir.jpg.asset.json";
 import brandPacman from "@/assets/brand-pacman.jpg.asset.json";
 import logofolio from "@/assets/logofolio.jpg.asset.json";
+import swPhotoshop from "@/assets/sw-photoshop.png.asset.json";
+import swIllustrator from "@/assets/sw-illustrator.png.asset.json";
+import swIndesign from "@/assets/sw-indesign.png.asset.json";
+import swGoogleAds from "@/assets/sw-googleads.png.asset.json";
+import swMetaBusiness from "@/assets/sw-metabusiness.png.asset.json";
+import swGoogleBusiness from "@/assets/sw-googlebusiness.png.asset.json";
+import swCanva from "@/assets/sw-canva.png.asset.json";
+import swMetaAds from "@/assets/sw-metaads.png.asset.json";
 
 export const images = {
   portrait: portrait.url,
@@ -28,6 +36,7 @@ export const navLinks = [
 
 export const contact = {
   phone: "+201116003029",
+  whatsappUrl: "https://wa.me/201116003029",
   email: "kckareem88@gmail.com",
   behance: "behance.net/kareemkc",
   behanceUrl: "https://behance.net/kareemkc",
@@ -52,14 +61,14 @@ export const stats = [
 ];
 
 export const software = [
-  { name: "Adobe Photoshop", value: 90 },
-  { name: "Adobe Illustrator", value: 85 },
-  { name: "Adobe InDesgin", value: 70 },
-  { name: "Google Ads", value: 90 },
-  { name: "Meta Business Suite", value: 90 },
-  { name: "Google Business", value: 85 },
-  { name: "Canva Design", value: 85 },
-  { name: "Meta Ads", value: 90 },
+  { name: "Adobe Photoshop", value: 90, icon: swPhotoshop.url },
+  { name: "Adobe Illustrator", value: 85, icon: swIllustrator.url },
+  { name: "Adobe InDesgin", value: 70, icon: swIndesign.url },
+  { name: "Google Ads", value: 90, icon: swGoogleAds.url },
+  { name: "Meta Business Suite", value: 90, icon: swMetaBusiness.url },
+  { name: "Google Business", value: 85, icon: swGoogleBusiness.url },
+  { name: "Canva Design", value: 85, icon: swCanva.url },
+  { name: "Meta Ads", value: 90, icon: swMetaAds.url },
 ];
 
 export const skills = [
