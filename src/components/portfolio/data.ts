@@ -36,6 +36,7 @@ export const navLinks = [
 
 export const contact = {
   phone: "+201116003029",
+  whatsappUrl: "https://wa.me/201116003029",
   email: "kckareem88@gmail.com",
   behance: "behance.net/kareemkc",
   behanceUrl: "https://behance.net/kareemkc",
