@@ -156,9 +156,17 @@ export function Skills() {
         {software.map((item) => (
           <div
             key={item.name}
-            className="reveal flex items-center gap-4 rounded-xl bg-white/10 p-4 backdrop-blur-sm"
+            className="reveal flex items-center gap-3 rounded-xl bg-white/10 p-4 backdrop-blur-sm"
           >
             <Ring value={item.value} />
+            <img
+              src={item.icon}
+              alt={`${item.name} icon`}
+              loading="lazy"
+              width={48}
+              height={48}
+              className="h-11 w-11 shrink-0 object-contain drop-shadow-md"
+            />
             <p className="text-lg leading-tight font-medium">{item.name}</p>
           </div>
         ))}
