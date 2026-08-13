@@ -9,6 +9,14 @@ import brandMaalem from "@/assets/brand-maalem.jpg.asset.json";
 import brandVanir from "@/assets/brand-vanir.jpg.asset.json";
 import brandPacman from "@/assets/brand-pacman.jpg.asset.json";
 import logofolio from "@/assets/logofolio.jpg.asset.json";
+import swPhotoshop from "@/assets/sw-photoshop.png.asset.json";
+import swIllustrator from "@/assets/sw-illustrator.png.asset.json";
+import swIndesign from "@/assets/sw-indesign.png.asset.json";
+import swGoogleAds from "@/assets/sw-googleads.png.asset.json";
+import swMetaBusiness from "@/assets/sw-metabusiness.png.asset.json";
+import swGoogleBusiness from "@/assets/sw-googlebusiness.png.asset.json";
+import swCanva from "@/assets/sw-canva.png.asset.json";
+import swMetaAds from "@/assets/sw-metaads.png.asset.json";
 
 export const images = {
   portrait: portrait.url,
