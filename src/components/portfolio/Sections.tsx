@@ -159,14 +159,16 @@ export function Skills() {
             className="reveal flex items-center gap-3 rounded-xl bg-white/10 p-4 backdrop-blur-sm"
           >
             <Ring value={item.value} />
-            <img
-              src={item.icon}
-              alt={`${item.name} icon`}
-              loading="lazy"
-              width={48}
-              height={48}
-              className="h-11 w-11 shrink-0 object-contain drop-shadow-md"
-            />
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white/10">
+              <img
+                src={item.icon}
+                alt={`${item.name} icon`}
+                loading="lazy"
+                width={44}
+                height={44}
+                className="h-9 w-9 object-contain drop-shadow-md"
+              />
+            </span>
             <p className="text-lg leading-tight font-medium">{item.name}</p>
           </div>
         ))}
