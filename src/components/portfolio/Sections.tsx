@@ -84,7 +84,7 @@ export function Hero() {
             alt="Kareem Abdo Hussein"
             width={1024}
             height={1536}
-            className="h-auto w-64 object-contain sm:w-80 lg:w-96"
+            className="h-auto w-[28rem] object-contain sm:w-[34rem] lg:w-[38rem]"
           />
         </div>
       </div>
@@ -101,15 +101,10 @@ export function About() {
         <p className="text-xl leading-relaxed sm:text-2xl">{aboutParagraphs[1]}</p>
         <p className="text-xl leading-relaxed sm:text-2xl">{aboutParagraphs[2]}</p>
       </div>
-      <div
-        dir="rtl"
-        className="font-arabic mt-16 grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-4"
-      >
+      <div dir="rtl" className="font-arabic mt-16 grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-4">
         {stats.map((stat) => (
           <div key={stat.label} className="reveal text-center">
-            <p className="font-display text-yellow text-6xl drop-shadow-lg sm:text-7xl">
-              {stat.value}
-            </p>
+            <p className="font-display text-yellow text-6xl drop-shadow-lg sm:text-7xl">{stat.value}</p>
             <p className="mt-2 text-xl font-semibold text-white">{stat.label}</p>
           </div>
         ))}
@@ -123,26 +118,8 @@ function Ring({ value }: { value: number }) {
   return (
     <svg viewBox="0 0 64 64" className="h-13 w-13 shrink-0 -rotate-90">
       <circle cx="32" cy="32" r="26" fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="7" />
-      <circle
-        cx="32"
-        cy="32"
-        r="26"
-        fill="none"
-        stroke="var(--brand-yellow)"
-        strokeWidth="7"
-        strokeLinecap="round"
-        strokeDasharray={`${(value / 100) * circumference} ${circumference}`}
-      />
-      <text
-        x="32"
-        y="32"
-        textAnchor="middle"
-        dominantBaseline="central"
-        className="fill-white text-xs font-bold"
-        transform="rotate(90 32 32)"
-      >
-        {value}%
-      </text>
+      <circle cx="32" cy="32" r="26" fill="none" stroke="var(--brand-yellow)" strokeWidth="7" strokeLinecap="round" strokeDasharray={`${(value / 100) * circumference} ${circumference}`} />
+      <text x="32" y="32" textAnchor="middle" dominantBaseline="central" className="fill-white text-xs font-bold" transform="rotate(90 32 32)">{value}%</text>
     </svg>
   );
 }
@@ -151,25 +128,13 @@ export function Skills() {
   return (
     <section id="skills" className="mx-auto max-w-7xl scroll-mt-24 px-6 py-16">
       <SectionTitle main="My" script="Skills & Expertise" />
-      <h3 className="font-display text-yellow reveal mb-6 text-3xl tracking-widest uppercase">
-        Software
-      </h3>
+      <h3 className="font-display text-yellow reveal mb-6 text-3xl tracking-widest uppercase">Software</h3>
       <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
         {software.map((item) => (
-          <div
-            key={item.name}
-            className="reveal flex items-center gap-3 rounded-xl bg-white/10 p-4 backdrop-blur-sm"
-          >
+          <div key={item.name} className="reveal flex items-center gap-3 rounded-xl bg-white/10 p-4 backdrop-blur-sm">
             <Ring value={item.value} />
             <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white/10">
-              <img
-                src={item.icon}
-                alt={`${item.name} icon`}
-                loading="lazy"
-                width={44}
-                height={44}
-                className="h-9 w-9 object-contain drop-shadow-md"
-              />
+              <img src={item.icon} alt={`${item.name} icon`} loading="lazy" width={44} height={44} className="h-9 w-9 object-contain drop-shadow-md" />
             </span>
             <p className="text-lg leading-tight font-medium">{item.name}</p>
           </div>
@@ -177,28 +142,18 @@ export function Skills() {
       </div>
       <div className="mt-16 grid gap-12 lg:grid-cols-2">
         <div className="reveal">
-          <h3 className="font-display text-yellow mb-6 text-3xl tracking-widest uppercase">
-            Skills
-          </h3>
+          <h3 className="font-display text-yellow mb-6 text-3xl tracking-widest uppercase">Skills</h3>
           <ul className="grid gap-3 text-lg sm:grid-cols-2">
             {skills.map((skill) => (
-              <li key={skill} className="flex items-center gap-3">
-                <span className="bg-yellow h-2.5 w-2.5 shrink-0 rounded-full" />
-                {skill}
-              </li>
+              <li key={skill} className="flex items-center gap-3"><span className="bg-yellow h-2.5 w-2.5 shrink-0 rounded-full" />{skill}</li>
             ))}
           </ul>
         </div>
         <div className="reveal">
-          <h3 className="font-display text-yellow mb-6 text-3xl tracking-widest uppercase">
-            Language
-          </h3>
+          <h3 className="font-display text-yellow mb-6 text-3xl tracking-widest uppercase">Language</h3>
           <ul className="space-y-3 text-lg">
             {languages.map((lang) => (
-              <li key={lang.name} className="flex items-center gap-3">
-                <span className="bg-yellow h-2.5 w-2.5 shrink-0 rounded-full" />
-                {lang.name} : {lang.level}
-              </li>
+              <li key={lang.name} className="flex items-center gap-3"><span className="bg-yellow h-2.5 w-2.5 shrink-0 rounded-full" />{lang.name} : {lang.level}</li>
             ))}
           </ul>
         </div>
@@ -225,18 +180,11 @@ export function Services() {
         {services.map((service) => {
           const Icon = serviceIcons[service.icon as keyof typeof serviceIcons];
           return (
-            <div
-              key={service.en}
-              className="reveal flex items-center gap-5 rounded-xl bg-white/10 p-6 backdrop-blur-sm transition hover:bg-white/20"
-            >
-              <span className="bg-yellow text-ink flex h-14 w-14 shrink-0 items-center justify-center rounded-full">
-                <Icon size={26} />
-              </span>
+            <div key={service.en} className="reveal flex items-center gap-5 rounded-xl bg-white/10 p-6 backdrop-blur-sm transition hover:bg-white/20">
+              <span className="bg-yellow text-ink flex h-14 w-14 shrink-0 items-center justify-center rounded-full"><Icon size={26} /></span>
               <div className="flex flex-1 items-center justify-between gap-4">
                 <p className="text-lg font-semibold sm:text-xl">{service.en}</p>
-                <p dir="rtl" className="font-arabic text-right text-lg font-bold sm:text-xl">
-                  {service.ar}
-                </p>
+                <p dir="rtl" className="font-arabic text-right text-lg font-bold sm:text-xl">{service.ar}</p>
               </div>
             </div>
           );
@@ -252,57 +200,18 @@ export function Work() {
       <SectionTitle main="Social Media Designs" script="" />
       <div className="space-y-20">
         {workProjects.map((project, index) => (
-          <article
-            key={project.name}
-            className={`reveal flex flex-col gap-8 lg:items-center ${
-              index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-            }`}
-          >
-            <div className="lg:w-3/5">
-              <img
-                src={project.image}
-                alt={project.alt}
-                loading="lazy"
-                className="h-auto w-full rounded-2xl object-contain shadow-2xl"
-              />
-            </div>
-            <div
-              dir="rtl"
-              className="font-arabic rounded-2xl bg-white/10 p-8 backdrop-blur-sm lg:w-2/5"
-            >
-              <h3 className="text-yellow text-3xl font-extrabold">
-                اسم الشركة: {project.name}
-              </h3>
+          <article key={project.name} className={`reveal flex flex-col gap-8 lg:items-center ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"}`}>
+            <div className="lg:w-3/5"><img src={project.image} alt={project.alt} loading="lazy" className="h-auto w-full rounded-2xl object-contain shadow-2xl" /></div>
+            <div dir="rtl" className="font-arabic rounded-2xl bg-white/10 p-8 backdrop-blur-sm lg:w-2/5">
+              <h3 className="text-yellow text-3xl font-extrabold">اسم الشركة: {project.name}</h3>
               <ul className="mt-6 space-y-4 text-lg leading-relaxed">
-                <li>
-                  <span className="text-yellow font-bold">المجال: </span>
-                  {project.field}
-                </li>
-                <li>
-                  <span className="text-yellow font-bold">البلد: </span>
-                  {project.country}
-                </li>
-                <li>
-                  <span className="text-yellow font-bold">مدة العمل: </span>
-                  <span dir="ltr" className="inline-block">
-                    {project.period}
-                  </span>
-                </li>
-                <li>
-                  <span className="text-yellow font-bold">الخدمات المقدمة: </span>
-                  {project.servicesAr}
-                </li>
-                <li>
-                  <span className="text-yellow font-bold">البرامج: </span>
-                  <span dir="ltr" className="inline-block">
-                    {project.tools}
-                  </span>
-                </li>
+                <li><span className="text-yellow font-bold">المجال: </span>{project.field}</li>
+                <li><span className="text-yellow font-bold">البلد: </span>{project.country}</li>
+                <li><span className="text-yellow font-bold">مدة العمل: </span><span dir="ltr" className="inline-block">{project.period}</span></li>
+                <li><span className="text-yellow font-bold">الخدمات المقدمة: </span>{project.servicesAr}</li>
+                <li><span className="text-yellow font-bold">البرامج: </span><span dir="ltr" className="inline-block">{project.tools}</span></li>
               </ul>
-              <p className="mt-6 border-t border-white/20 pt-5 text-lg leading-relaxed">
-                <span className="text-yellow font-bold">النتيجة: </span>
-                {project.result}
-              </p>
+              <p className="mt-6 border-t border-white/20 pt-5 text-lg leading-relaxed"><span className="text-yellow font-bold">النتيجة: </span>{project.result}</p>
             </div>
           </article>
         ))}
@@ -320,32 +229,14 @@ export function Identity() {
           <article key={board.title} className="reveal">
             <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
               <div>
-                <h3 className="font-display text-yellow text-3xl tracking-wide uppercase sm:text-4xl">
-                  {board.title}
-                </h3>
+                <h3 className="font-display text-yellow text-3xl tracking-wide uppercase sm:text-4xl">{board.title}</h3>
                 <p className="mt-1 text-lg font-medium">{board.subtitle}</p>
               </div>
-              <div className="flex items-center gap-2">
-                {board.colors.map((color) => (
-                  <span
-                    key={color}
-                    title={color}
-                    className="h-8 w-8 rounded-full border-2 border-white shadow"
-                    style={{ backgroundColor: color }}
-                  />
-                ))}
-              </div>
+              <div className="flex items-center gap-2">{board.colors.map((color) => (<span key={color} title={color} className="h-8 w-8 rounded-full border-2 border-white shadow" style={{ backgroundColor: color }} />))}</div>
             </div>
             <p className="mb-3 max-w-3xl text-base leading-7">{board.description}</p>
-            <p className="mb-6 text-sm tracking-widest uppercase">
-              Typography: {board.typography}
-            </p>
-            <img
-              src={board.image}
-              alt={`${board.title} brand identity board`}
-              loading="lazy"
-              className="h-auto w-full rounded-2xl object-contain shadow-2xl"
-            />
+            <p className="mb-6 text-sm tracking-widest uppercase">Typography: {board.typography}</p>
+            <img src={board.image} alt={`${board.title} brand identity board`} loading="lazy" className="h-auto w-full rounded-2xl object-contain shadow-2xl" />
           </article>
         ))}
       </div>
@@ -357,12 +248,7 @@ export function Logos() {
   return (
     <section id="logos" className="mx-auto max-w-7xl scroll-mt-24 px-6 py-16">
       <SectionTitle main="Logo Folio" script="" />
-      <img
-        src={images.logofolio}
-        alt="Logo folio: Media Hive, Business Hub, The Iris Beauty & Spa, Albehi, Vanir Travel Group, Assoul Mart, Dalida, Milestones, Pac Man Burger"
-        loading="lazy"
-        className="reveal h-auto w-full rounded-2xl object-contain shadow-2xl"
-      />
+      <img src={images.logofolio} alt="Logo folio: Media Hive, Business Hub, The Iris Beauty & Spa, Albehi, Vanir Travel Group, Assoul Mart, Dalida, Milestones, Pac Man Burger" loading="lazy" className="reveal h-auto w-full rounded-2xl object-contain shadow-2xl" />
     </section>
   );
 }
@@ -379,30 +265,16 @@ export function Contact() {
       <div className="grid items-center gap-14 lg:grid-cols-2">
         <div className="reveal">
           <p className="text-yellow font-script text-4xl sm:text-5xl">Thank You For</p>
-          <h2 className="font-display mt-2 text-6xl leading-tight tracking-wide text-white uppercase drop-shadow-lg sm:text-7xl">
-            Exploring
-            <br />
-            My Work
-          </h2>
-          <p className="text-yellow mt-8 max-w-md text-lg leading-relaxed font-semibold tracking-wide uppercase">
-            Every project and design is an opportunity to create something meaningful
-          </p>
-          <p className="mt-4 text-lg tracking-wide uppercase">
-            Let&#39;s create something amazing together
-          </p>
+          <h2 className="font-display mt-2 text-6xl leading-tight tracking-wide text-white uppercase drop-shadow-lg sm:text-7xl">Exploring<br />My Work</h2>
+          <p className="text-yellow mt-8 max-w-md text-lg leading-relaxed font-semibold tracking-wide uppercase">Every project and design is an opportunity to create something meaningful</p>
+          <p className="mt-4 text-lg tracking-wide uppercase">Let&#39;s create something amazing together</p>
         </div>
         <ul className="space-y-5">
           {items.map(({ icon: Icon, label, href, external }) => (
             <li key={label} className="reveal">
-              <a
-                href={href}
-                {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
-                className="flex items-center gap-5 rounded-xl bg-white/10 p-5 text-lg font-medium backdrop-blur-sm transition hover:bg-white/20 sm:text-xl"
-              >
-                <span className="bg-yellow text-ink flex h-12 w-12 shrink-0 items-center justify-center rounded-full">
-                  <Icon size={22} />
-                </span>
-                <span dir="ltr">{label}</span>
+              <a href={href} {...(external ? { target: "_blank", rel: "noreferrer" } : {})} className="flex items-center gap-4 rounded-xl bg-white/10 p-5 backdrop-blur-sm transition hover:bg-white/20">
+                <span className="bg-yellow text-ink flex h-12 w-12 shrink-0 items-center justify-center rounded-full"><Icon size={22} /></span>
+                <span className="break-all text-lg">{label}</span>
               </a>
             </li>
           ))}
