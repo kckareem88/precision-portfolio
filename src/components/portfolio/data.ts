@@ -1,4 +1,4 @@
-import portrait from "@/assets/portrait.png.asset.json";
+import portrait from "@/assets/portrait.png";
 import workViaggio from "@/assets/work-viaggio.jpg.asset.json";
 import workMaalem from "@/assets/work-maalem.jpg.asset.json";
 import workAlzaer from "@/assets/work-alzaer.jpg.asset.json";
@@ -19,7 +19,7 @@ import swCanva from "@/assets/sw-canva.png.asset.json";
 import swMetaAds from "@/assets/sw-metaads.png.asset.json";
 
 export const images = {
-  portrait: portrait.url,
+  portrait,
   logofolio: logofolio,
 };
 
