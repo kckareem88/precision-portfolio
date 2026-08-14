@@ -149,7 +149,7 @@ export function Skills() {
   return (
     <section id="skills" className="mx-auto max-w-7xl scroll-mt-24 px-6 py-16">
       <SectionTitle main="My" script="Skills & Expertise" />
-      <h3 className="font-display text-yellow reveal mb-8 text-2xl tracking-widest uppercase">
+      <h3 className="font-display text-yellow reveal mb-6 text-3xl tracking-widest uppercase">
         Software
       </h3>
       <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
