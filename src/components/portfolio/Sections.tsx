@@ -119,7 +119,7 @@ export function About() {
 function Ring({ value }: { value: number }) {
   const circumference = 2 * Math.PI * 26;
   return (
-    <svg viewBox="0 0 64 64" className="h-16 w-16 shrink-0 -rotate-90">
+    <svg viewBox="0 0 64 64" className="h-13 w-13 shrink-0 -rotate-90">
       <circle cx="32" cy="32" r="26" fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="7" />
       <circle
         cx="32"
