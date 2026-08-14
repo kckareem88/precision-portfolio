@@ -30,9 +30,11 @@ function SectionTitle({ main, script }: { main: string; script: string }) {
       <h2 className="font-display text-yellow text-6xl tracking-wide uppercase drop-shadow-lg sm:text-7xl md:text-8xl">
         {main}
       </h2>
-      <p className="font-script -mt-4 ml-2 text-3xl text-white drop-shadow sm:-mt-6 sm:text-4xl">
-        {script}
-      </p>
+      {script ? (
+        <p className="font-script -mt-4 ml-2 text-3xl text-white drop-shadow sm:-mt-6 sm:text-4xl">
+          {script}
+        </p>
+      ) : null}
     </div>
   );
 }
