@@ -1,5 +1,5 @@
 import portrait from "@/assets/portrait.png";
-import workViaggio from "@/assets/work-viaggio.jpg.asset.json";
+import workViaggio from "@/assets/work-viaggio.jpg";
 import workMaalem from "@/assets/work-maalem.jpg.asset.json";
 import workAlzaer from "@/assets/work-alzaer.jpg.asset.json";
 import workVanir from "@/assets/work-vanir.jpg.asset.json";
@@ -111,7 +111,7 @@ export type WorkProject = {
 
 export const workProjects: WorkProject[] = [
   {
-    image: workViaggio.url,
+    image: workViaggio,
     alt: "فياچو ترافيل",
     name: "فياچو ترافيل",
     field: "السفر و السياحة",
