@@ -30,9 +30,11 @@ function SectionTitle({ main, script }: { main: string; script: string }) {
       <h2 className="font-display text-yellow text-6xl tracking-wide uppercase drop-shadow-lg sm:text-7xl md:text-8xl">
         {main}
       </h2>
-      <p className="font-script -mt-4 ml-2 text-3xl text-white drop-shadow sm:-mt-6 sm:text-4xl">
-        {script}
-      </p>
+      {script ? (
+        <p className="font-script -mt-4 ml-2 text-3xl text-white drop-shadow sm:-mt-6 sm:text-4xl">
+          {script}
+        </p>
+      ) : null}
     </div>
   );
 }
@@ -247,7 +249,7 @@ export function Services() {
 export function Work() {
   return (
     <section id="work" className="mx-auto max-w-7xl scroll-mt-24 px-6 py-16">
-      <SectionTitle main="Social Media Designs" script="تصاميم سوشيال ميديا" />
+      <SectionTitle main="Social Media Designs" script="" />
       <div className="space-y-20">
         {workProjects.map((project, index) => (
           <article
@@ -354,7 +356,7 @@ export function Identity() {
 export function Logos() {
   return (
     <section id="logos" className="mx-auto max-w-7xl scroll-mt-24 px-6 py-16">
-      <SectionTitle main="Logo Folio" script="شعارات" />
+      <SectionTitle main="Logo Folio" script="" />
       <img
         src={images.logofolio}
         alt="Logo folio: Media Hive, Business Hub, The Iris Beauty & Spa, Albehi, Vanir Travel Group, Assoul Mart, Dalida, Milestones, Pac Man Burger"
