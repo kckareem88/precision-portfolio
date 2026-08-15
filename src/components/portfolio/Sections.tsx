@@ -256,7 +256,7 @@ export function Logos() {
 export function Contact() {
   const items = [
     { icon: Phone, label: contact.phone, href: `tel:${contact.phone}`, external: false },
-    { icon: Globe, label: contact.behance, href: contact.behanceUrl, external: true },
+    { icon: FaBehance, label: contact.behance, href: contact.behanceUrl, external: true },
     { icon: Linkedin, label: contact.linkedin, href: contact.linkedinUrl, external: true },
     { icon: Mail, label: contact.email, href: `mailto:${contact.email}`, external: false },
   ];
