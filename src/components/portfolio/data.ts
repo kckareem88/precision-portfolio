@@ -1,10 +1,10 @@
 import portrait from "@/assets/portrait.png";
 import workViaggio from "@/assets/work-viaggio-new.png.asset.json";
-import workMaalem from "@/assets/work-maalem.jpg.asset.json";
+import workMaalem from "@/assets/work-maalem.jpg";
 import workAlzaer from "@/assets/work-alzaer-new.png.asset.json";
 import workVanir from "@/assets/work-vanir.jpg";
 import workAgha from "@/assets/work-five-new.png.asset.json";
-import workPacman from "@/assets/work-pacman.jpg.asset.json";
+import workPacman from "@/assets/work-six-new.png.asset.json";
 import brandMaalem from "@/assets/brand-maalem.jpg.asset.json";
 import brandVanir from "@/assets/brand-vanir.jpg.asset.json";
 import brandPacman from "@/assets/brand-pacman.jpg.asset.json";
@@ -123,7 +123,7 @@ export const workProjects: WorkProject[] = [
       "تنفيذ محتوى بصري احترافي يعزز حضور العلامة التجارية على منصات التواصل الاجتماعي",
   },
   {
-    image: workMaalem.url,
+    image: workMaalem,
     alt: "معالم القمم للسفر و السياحة",
     name: "معالم القمم للسفر و السياحة",
     field: "السفر و السياحة",
