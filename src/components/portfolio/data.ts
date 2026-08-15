@@ -123,7 +123,7 @@ export const workProjects: WorkProject[] = [
       "تنفيذ محتوى بصري احترافي يعزز حضور العلامة التجارية على منصات التواصل الاجتماعي",
   },
   {
-    image: workMaalem,
+    image: workVanir,
     alt: "معالم القمم للسفر و السياحة",
     name: "معالم القمم للسفر و السياحة",
     field: "السفر و السياحة",
