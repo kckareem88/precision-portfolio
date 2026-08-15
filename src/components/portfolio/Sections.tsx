@@ -1,7 +1,6 @@
 import {
   CalendarClock,
   Heart,
-  Heart,
   Linkedin,
   Mail,
   Megaphone,
