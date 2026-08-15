@@ -10,6 +10,7 @@ import {
   Printer,
   Users,
 } from "lucide-react";
+import { FaBehance } from "react-icons/fa6";
 import {
   aboutParagraphs,
   brandBoards,
