@@ -118,7 +118,7 @@ export function Logos() { return (<section id="logos" className="mx-auto max-w-7
 export function Contact() {
   const items = [
     { icon: Phone, label: contact.phone, href: `tel:${contact.phone}`, external: false },
-    { icon: FaWhatsapp, label: "WhatsApp", href: contact.whatsappUrl, external: true },
+    { icon: FaWhatsapp, label: "+201116003029", href: contact.whatsappUrl, external: true },
     { icon: FaBehance, label: contact.behance, href: contact.behanceUrl, external: true },
     { icon: Linkedin, label: contact.linkedin, href: contact.linkedinUrl, external: true },
     { icon: Mail, label: contact.email, href: `mailto:${contact.email}`, external: false },
