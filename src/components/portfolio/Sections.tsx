@@ -1,6 +1,6 @@
 import {
   CalendarClock,
-  Globe,
+  
   Heart,
   Linkedin,
   Mail,
