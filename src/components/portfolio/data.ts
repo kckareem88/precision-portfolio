@@ -1,5 +1,5 @@
 import portrait from "@/assets/portrait.png";
-import workViaggio from "@/assets/work-viaggio.jpg";
+import workViaggio from "@/assets/work-viaggio-new.png.asset.json";
 import workMaalem from "@/assets/work-maalem.jpg.asset.json";
 import workAlzaer from "@/assets/work-alzaer.jpg.asset.json";
 import workVanir from "@/assets/work-vanir.jpg.asset.json";
