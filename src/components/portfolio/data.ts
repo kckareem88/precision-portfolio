@@ -197,7 +197,7 @@ export const brandBoards: BrandBoard[] = [
   {
     image: brandMaalem.url,
     title: "Milestones Peaks",
-    subtitle: "Travel agency",
+    subtitle: "Travel Agency",
     colors: ["#F26C21", "#132845", "#F5F5F5"],
     description:
       "Full brand identity for a travel and tourism company in Saudi Arabia: primary logo, logo variations, color palette, typography, grid system, stationery and brand applications.",
