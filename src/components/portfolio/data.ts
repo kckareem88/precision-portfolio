@@ -111,7 +111,7 @@ export type WorkProject = {
 
 export const workProjects: WorkProject[] = [
   {
-    image: workViaggio,
+    image: workViaggio.url,
     alt: "فياچو ترافيل",
     name: "فياچو ترافيل",
     field: "السفر و السياحة",
