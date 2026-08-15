@@ -1,6 +1,5 @@
 import {
   CalendarClock,
-  Globe,
   Heart,
   Linkedin,
   Mail,
@@ -11,6 +10,7 @@ import {
   Printer,
   Users,
 } from "lucide-react";
+import { FaBehance } from "react-icons/fa6";
 import {
   aboutParagraphs,
   brandBoards,
@@ -256,7 +256,7 @@ export function Logos() {
 export function Contact() {
   const items = [
     { icon: Phone, label: contact.phone, href: `tel:${contact.phone}`, external: false },
-    { icon: Globe, label: contact.behance, href: contact.behanceUrl, external: true },
+    { icon: FaBehance, label: contact.behance, href: contact.behanceUrl, external: true },
     { icon: Linkedin, label: contact.linkedin, href: contact.linkedinUrl, external: true },
     { icon: Mail, label: contact.email, href: `mailto:${contact.email}`, external: false },
   ];
@@ -273,7 +273,7 @@ export function Contact() {
           {items.map(({ icon: Icon, label, href, external }) => (
             <li key={label} className="reveal">
               <a href={href} {...(external ? { target: "_blank", rel: "noreferrer" } : {})} className="flex items-center gap-4 rounded-xl bg-white/10 p-5 backdrop-blur-sm transition hover:bg-white/20">
-                <span className="bg-yellow text-ink flex h-12 w-12 shrink-0 items-center justify-center rounded-full"><Icon size={22} /></span>
+                <span className="bg-yellow flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-black"><Icon size={22} /></span>
                 <span className="break-all text-lg">{label}</span>
               </a>
             </li>
